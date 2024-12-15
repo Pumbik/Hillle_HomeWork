@@ -9,6 +9,6 @@ namespace Notepad.Data
 		{
 		}
 
-		public DbSet<Notepad> Notepads { get; set; }
+		public DbSet<Notepad.Models.Notepad> Notepads { get; set; }
 	}
 }

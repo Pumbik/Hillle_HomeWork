@@ -16,7 +16,7 @@ namespace Notepad.Controllers
 
 		public IActionResult Index()
 		{
-			IEnumerable<Notepad> notepads = _context.Notepads;
+			IEnumerable<Notepad.Models.Notepad> notepads = _context.Notepads;
 			return View(notepads);
 		}
 
@@ -27,7 +27,7 @@ namespace Notepad.Controllers
 
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public IActionResult Create(Notepad notepad)
+		public IActionResult Create(Notepad.Models.Notepad notepad)
 		{
 			if (ModelState.IsValid)
 			{
@@ -59,7 +59,7 @@ namespace Notepad.Controllers
 
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public IActionResult Edit(Notepad notepad)
+		public IActionResult Edit(Notepad.Models.Notepad notepad)
 		{
 			if (ModelState.IsValid)
 			{
